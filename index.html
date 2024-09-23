@@ -1,66 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Donate Bangladesh</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Bangladesh</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <!-- Navbar Section -->
-  <nav class="navbar">
-    <div class="nav-left">
-      <button class="btn blog-btn"><a href="blog.html">Blog</a></button>
-    </div>
-    <div class="nav-center">
-      <button class="btn donation-btn active">Donation</button>
-      <img src="logo.png" alt="Logo" class="logo">
-      <button class="btn history-btn">History</button>
-    </div>
-    <div class="nav-right">
-      <span class="balance">Balance: <img src="coin-icon.png" alt="Coin Icon"> 1000</span>
-    </div>
-  </nav>
 
-  <!-- Donation Cards Section -->
-  <div class="donation-cards">
-    <div class="donation-card">
-      <img src="donation1.jpg" alt="Donation Image">
-      <h3>Donation Title 1</h3>
-      <p>Donation info goes here.</p>
-      <p>Current Donation: $<span class="donation-amount">0</span></p>
-      <input type="number" class="donation-input" placeholder="Enter amount">
-      <button class="donate-btn">Donate Now</button>
-    </div>
-    <div class="donation-card">
-      <img src="donation2.jpg" alt="Donation Image">
-      <h3>Donation Title 2</h3>
-      <p>Donation info goes here.</p>
-      <p>Current Donation: $<span class="donation-amount">0</span></p>
-      <input type="number" class="donation-input" placeholder="Enter amount">
-      <button class="donate-btn">Donate Now</button>
-    </div>
-    <div class="donation-card">
-      <img src="donation3.jpg" alt="Donation Image">
-      <h3>Donation Title 3</h3>
-      <p>Donation info goes here.</p>
-      <p>Current Donation: $<span class="donation-amount">0</span></p>
-      <input type="number" class="donation-input" placeholder="Enter amount">
-      <button class="donate-btn">Donate Now</button>
-    </div>
-  </div>
+<body class="bg-gray-100">
 
-  <!-- History Section (Initially Hidden) -->
-  <div class="history-section" style="display: none;"></div>
+    <!-- Navbar Section -->
+    <nav class="bg-white shadow-lg sticky top-0 flex justify-between items-center py-4 px-8 z-10">
+        <div class="flex items-center space-x-4">
+            <a href="blog.html" class="bg-green-500 text-white font-semibold py-2 px-4 rounded-lg">Blog</a>
+        </div>
+        <div class="flex items-center space-x-4">
+            <img src="assets/logo.png" alt="Logo" class="w-12 h-12">
+            <span class="balance text-black-500 font-semibold text-lg">Donate Bangladesh</span>
+        </div>
+        <div class="flex items-center space-x-2">
+            <img src="assets/coin.png" alt="Coin Icon" class="w-5 h-5">
+            <span class="balance text-black-500 font-semibold text-lg">5500 BDT</span>
+        </div>
+    </nav>
 
-  <!-- Static Modal -->
-  <div class="modal" id="successModal" style="display: none;">
-    <div class="modal-content">
-      <p>Donation successful!</p>
-      <button id="closeModal">Close</button>
+    <!-- Donation and History Buttons (Sticky) -->
+    <div class="sticky top-16 bg-white z-10 shadow-md py-4">
+        <div class="flex justify-center space-x-4">
+            <button class="donation-btn bg-green-500 text-white py-2 px-6 rounded-lg active">Donation</button>
+            <button class="history-btn bg-gray-200 py-2 px-6 rounded-lg">History</button>
+        </div>
     </div>
-  </div>
 
-  <script src="script.js"></script>
+    <!-- Donation Cards Section -->
+    <div class="flex flex-col space-y-6 mt-10 px-40">
+        <!-- Donation Card 1 -->
+        <div class="bg-white shadow-lg p-6 rounded-lg flex items-center space-x-6">
+            <img src="assets/noakhali.png" alt="Noakhali Donation" class="w-80 h-80 object-cover rounded-lg">
+            <div class="flex-1">
+                <h3 class="text-xl font-semibold">Donate for Flood at Noakhali, Bangladesh</h3>
+                <p class="text-gray-600 mt-2">The recent floods in Noakhali have caused significant damage to<br> homes and
+                    infrastructure. Your donation will help provide essential<br> supplies and to those affected by this
+                    disaster. Every contribution<br> makes a difference.</p>
+                <p class="mt-2 text-gray-800">Current Donation: <span class="donation-amount">0 BDT</span></p>
+                <input type="number" class="donation-input mt-4 p-2 border rounded w-full" placeholder="Write Donation Amount">
+                <button class="donate-btn bg-green-500 text-white mt-4 py-2 px-6 rounded-lg w-full">Donate Now</button>
+            </div>
+        </div>
+
+        <!-- Donation Card 2 -->
+        <div class="bg-white shadow-lg p-6 rounded-lg flex items-center space-x-6">
+            <img src="assets/feni.png" alt="Feni Donation" class="w-80 h-80 object-cover rounded-lg">
+            <div class="flex-1">
+                <h3 class="text-xl font-semibold">Donate for Flood Relief in Feni, Bangladesh</h3>
+                <p class="text-gray-600 mt-2">The recent floods in Feni have caused significant damage to<br> homes and
+                    infrastructure. Your donation will help provide essential<br> supplies and to those affected by this
+                    disaster. Every contribution<br> makes a difference.</p>
+                <p class="mt-2 text-gray-800">Current Donation: <span class="donation-amount">0 BDT</span></p>
+                <input type="number" class="donation-input mt-4 p-2 border rounded w-full" placeholder="Write Donation Amount">
+                <button class="donate-btn bg-green-500 text-white mt-4 py-2 px-6 rounded-lg w-full">Donate Now</button>
+            </div>
+        </div>
+
+        <!-- Donation Card 3 -->
+        <div class="bg-white shadow-lg p-6 rounded-lg flex items-center space-x-6">
+            <img src="assets/quota-protest.png" alt="Quota Movement Donation" class="w-80 h-80 object-cover rounded-lg">
+            <div class="flex-1">
+                <h3 class="text-xl font-semibold">Aid for Injured in the Quota Movement</h3>
+                <p class="text-gray-600 mt-2">The recent protests have caused significant injuries. Your donation will help<br>
+                    provide medical care to those affected. Every contribution counts.</p>
+                <p class="mt-2 text-gray-800">Current Donation: <span class="donation-amount">0 BDT</span></p>
+                <input type="number" class="donation-input mt-4 p-2 border rounded w-full" placeholder="Write Donation Amount">
+                <button class="donate-btn bg-green-500 text-white mt-4 py-2 px-6 rounded-lg w-full">Donate Now</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- History Section (Initially Hidden) -->
+    <div class="history-section mt-10 px-8 hidden"></div>
+
+    <!-- Static Modal -->
+
+    <!-- Static Modal -->
+<div id="successModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+    <div class="bg-white p-8 rounded-lg shadow-lg text-center max-w-xs">
+        <h2 class="text-2xl font-semibold">Congrats!</h2>
+        <img src="assets/coin.png" alt="Donation Icon" class="w-12 h-12 mx-auto mt-4">
+        <p class="mt-4 text-lg">You Have Donated for Humankind</p>
+        <p class="text-lg font-bold mt-2">Successfully</p>
+        <button id="closeModal" class="mt-4 bg-gray-200 text-black py-2 px-4 rounded-lg">close confirmation</button>
+    </div>
+</div>
+
+    <!--<div id="successModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+            <p>Donation successful!</p>
+            <button id="closeModal" class="mt-4 bg-blue-500 text-white py-2 px-4 rounded-lg">Close</button>
+        </div>
+    </div>-->
+
+    <script src="script.js"></script>
 </body>
+
 </html>
