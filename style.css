@@ -1,0 +1,102 @@
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav-left, .nav-right, .nav-center {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    margin: 0 20px;
+  }
+  
+  .balance {
+    font-size: 16px;
+  }
+  
+  .btn {
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .active {
+    background-color: #007BFF;
+    color: white;
+  }
+  
+  /* Donation Cards Styles */
+  .donation-cards {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+  }
+  
+  .donation-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+  }
+  
+  .donate-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Modal Styles */
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .modal-content {
+    text-align: center;
+  }
+  
+  #closeModal {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Blog Content Styles */
+  .blog-content {
+    margin: 20px;
+  }
+  
+  .blog-content h3 {
+    margin-top: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .donation-cards {
+      flex-direction: column;
+    }
+  
+    .donation-card {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  
