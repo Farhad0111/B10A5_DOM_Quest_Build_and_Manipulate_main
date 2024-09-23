@@ -4,26 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog</title>
-  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <nav class="navbar">
-    <a href="index.html">Back to Home</a>
+<body class="bg-gray-100">
+  <nav class="bg-white shadow-lg p-4">
+    <a href="index.html" class="bg-green-500 text-white font-semibold py-2 px-4 rounded hover:bg-green-600 transition duration-300">Home</a>
   </nav>
-  
-  <section class="blog-content">
-    <h2>Blog</h2>
-    <h3>What is the Document Object Model (DOM)?</h3>
-    <p>The DOM is a programming interface for web documents...</p>
 
-    <h3>How do you select an element from the DOM?</h3>
-    <p>Elements can be selected using methods like `getElementById`, `querySelector`...</p>
+  <section class="p-8">
+    <h2 class="text-2xl font-semibold mb-6">Important FAQ</h2>
 
-    <h3>What is event delegation and why is it useful?</h3>
-    <p>Event delegation allows you to handle events at a higher level...</p>
+    <h3 class="text-xl font-bold">What is the Document Object Model (DOM)?</h3>
+    <p class="mt-2 mb-4">The **Document Object Model (DOM)** is a programming interface designed for web documents like HTML and XML. It models the document's structure as a hierarchical tree of objects, with each node representing an element, attribute, or content. This structure enables programming languages, such as JavaScript, to access, modify, and manipulate the document's layout, content, and styles dynamically.</p>
 
-    <h3>How do you manipulate an element's attributes and styles?</h3>
-    <p>You can use properties like `setAttribute`, `style`...</p>
+    <h3 class="text-xl font-bold">How do you select an element from the DOM?</h3>
+    <p class="mt-2 mb-4">getElementById('id') – Select by ID. getElementsByClassName('class') – Select by class. getElementsByTagName('tag') – Select by tag. querySelector('selector') – Select the first matching element. querySelectorAll('selector') – Select all matching elements.</p>
+
+    <h3 class="text-xl font-bold">What is event delegation and why is it useful?</h3>
+    <p class="mt-2 mb-4">Event delegation is a JavaScript technique where, rather than adding event listeners to each individual child element, you place a single event listener on a parent element. This method takes advantage of event bubbling, where events initiated on a child element travel up through its parent elements, allowing the parent to handle the event.</p>
+
+    <h3 class="text-xl font-bold">How do you manipulate an element's attributes and styles?</h3>
+    <p class="mt-2 mb-4">In JavaScript, you can readily modify an element's attributes and styles through different methods and properties.</p>
   </section>
 </body>
 </html>
