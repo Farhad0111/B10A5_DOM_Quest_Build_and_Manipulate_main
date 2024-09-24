@@ -123,3 +123,8 @@ function resetButtonStyles() {
 // Initial display update and set default active button
 updateBalanceDisplay();
 setActiveButton(donationButton, historyButton); // Default active button set to Donation
+
+
+
+
+
